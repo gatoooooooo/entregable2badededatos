@@ -1,6 +1,6 @@
 # ENTREGABLE 2
 #### **crear base de datos**
->crear base de datos
+crear base de datos
 ```sql
 CREATE DATABASE Clinica;
 GO
@@ -57,7 +57,7 @@ GO
 ---
 ---
 #### **insertar datos**
->Insertar datos en la tabla Paciente
+Insertar datos en la tabla Paciente
 ```sql
 INSERT INTO Paciente (Nombre, Apellido, FechaNacimiento, Genero, Telefono, Direccion, Email)
 VALUES 
@@ -100,31 +100,31 @@ GO
 ---
 ---
 #### **consultas simples**
-> 1)  Seleccionar todos los pacientes
+1)  Seleccionar todos los pacientes
 ```sql
 SELECT * FROM Paciente;
 ```
- 2) Seleccionar todos los doctores
+2) Seleccionar todos los doctores
  ```sql
 SELECT * FROM Doctor;
 ```
- 3) Seleccionar todas las habitaciones
+3) Seleccionar todas las habitaciones
  ```sql
 SELECT * FROM Habitacion;
 ```
- 4) Seleccionar todos los pacientes de género femenino
+4) Seleccionar todos los pacientes de género femenino
  ```sql
 SELECT * FROM Paciente WHERE Genero = 'F';
 ```
- 5) Seleccionar habitaciones que están ocupadas
+5) Seleccionar habitaciones que están ocupadas
  ```sql
 SELECT * FROM Habitacion WHERE Estado = 'Ocupada';
 ```
 ---
 ---
 ---
-**Consultas avanzadas**
-> 1) Lista de pacientes y sus habitaciones asignadas
+### **Consultas avanzadas**
+1) Lista de pacientes y sus habitaciones asignadas
 ```sql
 SELECT 
     p.PacienteID,
@@ -186,8 +186,8 @@ WHERE c.FechaConsulta BETWEEN '2023-01-01' AND '2023-12-31';
 ---
 ---
 ---
-**Insertar**
->paciente
+### **Insertar**
+paciente
 ```sql
 INSERT INTO Paciente (Nombre, Apellido, FechaNacimiento, Genero, Telefono, Direccion, Email)
 VALUES ('María', 'López', '1992-08-20', 'F', '925323234', 'Calle Principal 123', 'lopez@gmail.com');
@@ -218,8 +218,8 @@ WHERE
 ---
 ---
 ---
-**Actualizar**
->paciente
+### **Actualizar**
+paciente
 ```sql
 UPDATE Paciente
 SET Telefono = '92657415', Direccion = 'Calle Segundaria 123', Email = 'lopezg@gmail.com'
@@ -250,7 +250,7 @@ WHERE PacienteID = 6;
 ---
 ---
 ---
-**Eliminar**
+### **Eliminar**
 >paciente
 ```sql
 DELETE FROM Paciente
@@ -269,8 +269,8 @@ WHERE NumeroHabitacion = '103';
 ---
 ---
 ---
-**Procedimiento**
->procedimiento lista paciente
+### **Procedimiento**
+procedimiento lista paciente
 ```sql
 CREATE PROCEDURE ListarPacientesPorGenero
     @Genero CHAR(1)
