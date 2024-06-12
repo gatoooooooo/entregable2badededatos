@@ -11,10 +11,8 @@ USE Clinica
 GO
 ```
 ---
----
----
 #### **crear tablas**
->paciente
+paciente
 ```sql
 CREATE TABLE Paciente (
     PacienteID INT PRIMARY KEY IDENTITY(1,1),
@@ -53,8 +51,6 @@ CREATE TABLE Habitacion (
 );
 GO
 ```
----
----
 ---
 #### **insertar datos**
 Insertar datos en la tabla Paciente
@@ -97,8 +93,6 @@ UPDATE Habitacion SET PacienteID = 3 WHERE NumeroHabitacion = '105';
 GO
 ```
 ---
----
----
 #### **consultas simples**
 1)  Seleccionar todos los pacientes
 ```sql
@@ -120,8 +114,6 @@ SELECT * FROM Paciente WHERE Genero = 'F';
  ```sql
 SELECT * FROM Habitacion WHERE Estado = 'Ocupada';
 ```
----
----
 ---
 ### **Consultas avanzadas**
 1) Lista de pacientes y sus habitaciones asignadas
@@ -184,8 +176,6 @@ JOIN Doctor d ON c.DoctorID = d.DoctorID
 WHERE c.FechaConsulta BETWEEN '2023-01-01' AND '2023-12-31';
 ```
 ---
----
----
 ### **Insertar**
 paciente
 ```sql
@@ -215,8 +205,6 @@ JOIN
 WHERE 
     p.Nombre = 'María' AND p.Apellido = 'López';
 ```
----
----
 ---
 ### **Actualizar**
 paciente
@@ -248,8 +236,6 @@ FROM Paciente
 WHERE PacienteID = 6;
 ```
 ---
----
----
 ### **Eliminar**
 >paciente
 ```sql
@@ -266,8 +252,6 @@ habitacion
 DELETE FROM Habitacion
 WHERE NumeroHabitacion = '103';
 ```
----
----
 ---
 ### **Procedimiento**
 procedimiento lista paciente
